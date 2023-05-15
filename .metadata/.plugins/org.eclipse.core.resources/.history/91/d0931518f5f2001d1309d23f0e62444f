@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login and Register</title>
+
+
+</head>
+<body>
+
+<h1><span th:text="${id}"></span> Mail Id not Register </h1>
+
+  <div class="col">
+          <a th:href="@{/regfrom}">Register</a>
+   </div>
+
+
+</body>
+</html>

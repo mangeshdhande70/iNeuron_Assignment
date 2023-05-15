@@ -1,0 +1,63 @@
+package com.ineuron.controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.ineuron.dto.StudentDTO;
+import com.ineuron.factory.ServiceStudentFactory;
+import com.ineuron.service.IServiceStudent;
+
+@WebServlet(urlPatterns = "/getinfo")
+public class Controller extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	IServiceStudent iServiceStudent = ServiceStudentFactory.getService();
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+		try {
+			int id = Integer.parseInt(request.getParameter("id"));
+			StudentDTO student = iServiceStudent.getStudentInfoById(id);
+			RequestDispatcher requestDispatcher = null;
+
+//			System.out.println("Adsresss :: "+student.getSaddress());
+//			System.out.println("ID :: "+student.getId());
+//			System.out.println("Name :: "+student.getSname());
+//			System.out.println("Age :: "+student.getSage());
+
+			if (student != null) {
+
+				request.setAttribute("id", student.getId());
+				request.setAttribute("name", student.getSname());
+				request.setAttribute("address", student.getSaddress());
+				request.setAttribute("age", student.getSage());
+
+//				System.out.println("Adsresss :: "+request.getParameter("address"));
+//				System.out.println("ID :: "+request.getParameter("id"));
+//				System.out.println("Name :: "+request.getParameter("name"));
+//				System.out.println("Age :: "+request.getParameter("age"));
+
+				requestDispatcher = request.getRequestDispatcher("../info.html");
+				requestDispatcher = request.getRequestDispatcher("../success.html");
+				
+				System.out.println(requestDispatcher);
+				
+				requestDispatcher.forward(request, response);
+
+			}
+
+		} catch (IOException | SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package in.ineuron;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+
+@SpringBootApplication
+public class Qp21Application  {
+	
+	
+
+	public static void main(String[] args) {
+		SpringApplication.run(Qp21Application.class, args);
+	}
+
+
+}

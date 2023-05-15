@@ -1,0 +1,19 @@
+
+/*
+ * Demonstrate the difference between abstract class and interface by writing programs
+   as well as in key points.
+ */
+
+package in.ineuron;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+	}
+
+}

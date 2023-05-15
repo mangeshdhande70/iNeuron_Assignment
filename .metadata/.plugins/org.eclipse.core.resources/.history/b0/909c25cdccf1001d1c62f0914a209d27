@@ -1,0 +1,14 @@
+package in.ineuron.usingabstract;
+
+abstract public class BankServiceUsingAbstractClass {
+	
+	IciciBankServiceUsingAbstractClassImpl iciciBankServiceImpl = new IciciBankServiceUsingAbstractClassImpl();
+	
+	public String checkBalance() {
+     	return	iciciBankServiceImpl.checkBalance();	
+	}
+	
+	public abstract String withdraw(float amount);
+	public abstract String deposite(float amount);
+
+}

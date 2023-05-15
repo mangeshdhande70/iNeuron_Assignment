@@ -1,0 +1,10 @@
+server:
+  port: 9992
+  
+  
+
+spring:
+  config:
+    import: configserver:http://localhost:9991
+
+  

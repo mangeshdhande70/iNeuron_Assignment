@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Request Information</title>
+</head>
+<body>
+	<h1>Student Information:</h1>
+	<ul>
+		<li>Name: ${name}</li>
+		<li>ID: ${id}</li>
+		<li>Age: ${age}</li>
+		<li>Address: ${address}</li>
+	</ul>
+</body>
+</html>

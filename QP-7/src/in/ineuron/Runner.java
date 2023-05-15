@@ -1,0 +1,36 @@
+
+/*
+ *  Create a Java program that implements a binary search algorithm. The program
+	should accept user input for the target value and search for it in a sorted array. The
+	program should return the index of the target value if found or a message if not
+	found
+ */
+
+
+package in.ineuron;
+
+import java.util.Scanner;
+
+import in.ineuron.service.BinarySearch;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		
+		BinarySearch service = new BinarySearch();
+		
+		System.out.println("Enter Target Element ::");
+		int target = scanner.nextInt();
+		
+		String res = service.findNumberPresentOrNot(target);
+		
+		System.out.println(res);
+		
+		
+		
+	}
+
+}

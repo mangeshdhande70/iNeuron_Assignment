@@ -1,0 +1,13 @@
+package in.ineuron.service;
+
+public class EvenService implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}

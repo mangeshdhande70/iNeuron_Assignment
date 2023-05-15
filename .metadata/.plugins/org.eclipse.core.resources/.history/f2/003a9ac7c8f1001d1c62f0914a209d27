@@ -1,0 +1,20 @@
+package in.ineuron;
+
+import in.ineuron.usinginterface.IBankService;
+import in.ineuron.usinginterface.IciciBankServiceImpl;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		IBankService service = new IciciBankServiceImpl();
+		
+		String string = service.FunctionalInterface();
+		
+		System.out.println(string);
+		
+		
+		
+	}
+
+}

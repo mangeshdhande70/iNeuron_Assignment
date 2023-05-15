@@ -1,0 +1,5 @@
+package in.ineuron.usingabstract;
+
+abstract public class BankService {
+
+}

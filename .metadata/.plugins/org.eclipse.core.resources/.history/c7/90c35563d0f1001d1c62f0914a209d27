@@ -1,0 +1,22 @@
+
+/*
+ *  Create a Java program that implements a binary search algorithm. The program
+	should accept user input for the target value and search for it in a sorted array. The
+	program should return the index of the target value if found or a message if not
+	found
+ */
+
+
+package in.ineuron;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+	}
+
+}

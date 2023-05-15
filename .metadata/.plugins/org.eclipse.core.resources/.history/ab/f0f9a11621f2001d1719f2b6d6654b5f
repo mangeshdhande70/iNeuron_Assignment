@@ -1,0 +1,68 @@
+package com.ineuron.controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.ineuron.dto.StudentDTO;
+import com.ineuron.factory.ServiceStudentFactory;
+import com.ineuron.service.IServiceStudent;
+
+@WebServlet(urlPatterns = "/getinfo")
+public class Controller extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	IServiceStudent iServiceStudent = ServiceStudentFactory.getService();
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+		try {
+			int id = Integer.parseInt(request.getParameter("id"));
+			StudentDTO student = iServiceStudent.getStudentInfoById(id);
+			RequestDispatcher dispatcher = null;
+			
+			System.out.println("Adsresss :: "+student.getSaddress());
+			System.out.println("ID :: "+student.getId());
+			System.out.println("Name :: "+student.getSname());
+			System.out.println("Age :: "+student.getSage());
+
+			if (student != null) {
+
+				request.setAttribute("id", student.getId());
+				request.setAttribute("name", student.getSname());
+				request.setAttribute("address", student.getSaddress());
+				request.setAttribute("age", student.getSage());
+
+				try {
+					dispatcher = request.getRequestDispatcher("../info.html");
+					dispatcher.forward(request, response);
+				} catch (ServletException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			} else {
+				dispatcher = request.getRequestDispatcher("../notfound.html");
+				try {
+					dispatcher.forward(request, response);
+				} catch (ServletException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+
+		} catch (IOException | SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package in.ineuron.service;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+
+public class SetToListService{
+	
+	
+	Set<Integer> set = Set.of(2,4,7,5,10,12,16);
+	
+	
+	public List<Set<Integer>> setToList(){
+		
+		List<Set<Integer>> list = Arrays.asList(set) ;
+		System.out.println(list);
+		return list;
+	}
+
+	
+}

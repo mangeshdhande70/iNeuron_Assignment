@@ -1,0 +1,44 @@
+package in.ineuron.service;
+
+public class BinarySearch {
+	
+  public String findNumberPresentOrNot(int target) {
+	  
+	  int[] arr = {1, 2, 3, 4, 5,13,24,45,67};
+	  
+	  int position = binarySearch(arr, target, 0, arr.length-1);
+	  
+	  if (position!=-1) {
+		return "Target Number found at postion :: "+position;
+	   }
+	  
+	  return target+" Target Element not present in a Array";
+  }
+  
+  
+  public int binarySearch(int [] arr , int target,int first , int end) {
+	  
+	  if (first > end) {
+		return -1;
+	   }
+	  
+	  int mid = (first+end)/2;
+	  
+	  if (arr[mid]==target) {
+		return mid;
+	  }
+	  
+	  else if(arr[mid] < target) {
+		 return binarySearch(arr, target, mid+1, end);
+		}
+	  
+	  else {
+		 return binarySearch(arr, target, first, mid-1);
+	  }
+	  
+	 
+  }
+  
+  
+
+}

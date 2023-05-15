@@ -1,0 +1,53 @@
+package com.ineuron.persis;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.ineuron.dto.StudentDTO;
+import com.ineuron.model.JDBCConnection;
+
+public class StudentDaoImpl implements IStudentDao {
+
+	Connection connection = null;
+	PreparedStatement preparedStatement = null;
+	
+	private ResultSet resultSet;
+	
+	
+
+	@Override
+	public StudentDTO getInfo(Integer id) {
+		
+		String sqlQuery = "SELECT * FROM student WHERE sid=?";
+
+		if (connection == null) {
+			connection = JDBCConnection.jdbcConnectionByHikariCP();
+		}
+
+		if (connection != null)
+			preparedStatement = connection.prepareStatement(sqlQuery);
+
+		preparedStatement.setInt(1, id);
+
+		System.out.println(id);
+
+		resultSet = preparedStatement.executeQuery();
+
+		StudentDTO studentDTO = new StudentDTO();
+
+		if (resultSet.next()) {
+			studentDTO.setId(resultSet.getInt(1));
+			studentDTO.setSname(resultSet.getString(2));
+			studentDTO.setSage(resultSet.getInt(3));
+			studentDTO.setSaddress(resultSet.getString(4));
+		}		
+		return studentDTO;
+	}
+
+	
+
+	
+	
+
+}

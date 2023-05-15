@@ -1,0 +1,39 @@
+package in.ineuron.service;
+
+public class Processor {
+	
+	String processorName;
+	String companyName;
+	String processorType;
+	
+	
+	public Processor() {
+		super();
+	}
+
+
+	public Processor(String processorName, String companyName) {
+		super();
+		this.processorName = processorName;
+		this.companyName = companyName;
+	}
+
+
+	public Processor(String processorName, String companyName, String processorType) {
+		super();
+		this.processorName = processorName;
+		this.companyName = companyName;
+		this.processorType = processorType;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Processor [processorName=" + processorName + ", companyName=" + companyName + ", processorType="
+				+ processorType + "]";
+	}
+	
+	
+	
+
+}

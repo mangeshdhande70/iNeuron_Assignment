@@ -1,0 +1,26 @@
+package in.ineuron.service;
+
+public class Laptop extends Processor {
+	
+	
+	Long laptopId;
+	String laptopComapny;
+	int ram;
+	String processorName;
+	String companyName;
+	String processorType;
+	
+	
+	public Laptop() {
+		super();
+	}
+
+
+	public Laptop(Long laptopId, String laptopComapny, int ram, String processorName, String companyName,
+			String processorType) {
+		super(processorName , processorType , companyName);
+		this.laptopId = laptopId;
+		this.laptopComapny = laptopComapny;
+		this.ram = ram;
+	}
+}

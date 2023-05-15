@@ -1,0 +1,14 @@
+package in.ineuron.service;
+
+public class EvenService implements Runnable {
+
+	@Override
+	public void run() {
+
+		for(int i=1;i<=10;i++) {
+			if (i%2==0) {
+				System.out.println("Even numbers b/w 1 to 10 :: "+i+",");
+			}
+		}		
+	}
+}

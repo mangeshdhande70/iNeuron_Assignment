@@ -1,0 +1,23 @@
+
+
+Interface
+============
+
+1. Interface means Specific Requirement Service.
+2. If we don't know about the implementation then we can go for interface and for loose coupling.
+3. Inside interface you can't have concrete method means you can't declare body of method in interface
+   but from java 8 you can create default & static method body.
+4. every method inside interface is by default public & abstract. 
+5. the variable declared inside interface is by default private and final so, you need to initialize the 
+   value of variable while declaring & you can't declare variable of other combinations like (public String variable). 
+6. Using interface we can achieve 100% Abstraction.    
+
+
+abstract
+============
+
+1. If we know about the partial implementation then we can go for abstract.
+2. Inside abstract class you can have concrete method means you can declare body of methods as well as abstract method.
+3. every method inside abstract  class cannot be public & abstract. 
+4. the variable declared inside abstract class is not by default private and final & you can declare variable of other combinations like (public String variable). 
+5. Using interface we can't achieve 100% Abstraction 

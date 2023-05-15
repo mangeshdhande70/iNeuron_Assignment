@@ -1,0 +1,34 @@
+
+/*
+ * Demonstrate the difference between abstract class and interface by writing programs
+   as well as in key points.
+ */
+
+package in.ineuron;
+
+import in.ineuron.usingabstract.BankServiceUsingAbstractClass;
+import in.ineuron.usingabstract.IciciBankServiceUsingAbstractClassImpl;
+import in.ineuron.usinginterface.IBankServiceUsingInterface;
+import in.ineuron.usinginterface.IciciBankServiceUsingInterfaceImpl;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		IBankServiceUsingInterface iBankServiceUsingInterface = new IciciBankServiceUsingInterfaceImpl();		
+		System.out.println("Using Interface");
+		String balance = iBankServiceUsingInterface.checkBalance();
+		
+		System.out.println(balance);
+		
+		
+		BankServiceUsingAbstractClass bankServiceUsingAbstractClass = new IciciBankServiceUsingAbstractClassImpl();
+		System.out.println("\nUsing Abstratc class");
+		System.out.println(bankServiceUsingAbstractClass.checkBalance());
+		
+		
+		
+		
+	}
+
+}

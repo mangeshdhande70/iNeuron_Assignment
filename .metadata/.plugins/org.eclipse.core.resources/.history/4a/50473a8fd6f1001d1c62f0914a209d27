@@ -1,0 +1,25 @@
+package in.ineuron.service;
+
+import java.util.List;
+import java.util.Set;
+
+public class SetToListService{
+	
+	
+	Set<Integer> set = Set.of(2,4,7,5,10,12,16);
+	
+	@SuppressWarnings("null")
+	public List<Integer> setToList(){
+		
+		List<Integer> list = null ;
+		
+		set.forEach(n-> list.add(n));
+		
+		System.out.println(list);
+		
+		
+		return list;
+	}
+
+	
+}

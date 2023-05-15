@@ -1,0 +1,23 @@
+
+/*
+ *  Write a Java program that reads a set of integers from the user and stores them in a
+	List. The program should then find the second largest and second smallest elements
+	in the List
+ */
+
+
+package in.ineuron;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+	
+		
+		
+		
+		
+		
+	}
+
+}

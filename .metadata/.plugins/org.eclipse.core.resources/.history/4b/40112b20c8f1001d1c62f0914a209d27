@@ -1,0 +1,9 @@
+package in.ineuron.usingabstract;
+
+abstract public class BankService {
+	
+	public String checkBalance();
+	public String withdraw(float amount);
+	public String deposite(float amount);
+
+}

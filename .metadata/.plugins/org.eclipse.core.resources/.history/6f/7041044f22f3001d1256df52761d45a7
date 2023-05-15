@@ -1,0 +1,20 @@
+package in.ineuron.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ineuron.model.IProductDao;
+import in.ineuron.product.Product;
+
+@Service
+public class ProductServiceImpl implements IProductService {
+	
+	@Autowired
+	private IProductDao repo;
+
+	@Override
+	public Integer addProduct(Product product) {
+		return  repo.save(product).getProductId();
+	}
+
+}

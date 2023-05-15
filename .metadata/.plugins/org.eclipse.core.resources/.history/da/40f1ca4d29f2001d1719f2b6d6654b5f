@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Information</title>
+</head>
+<body>
+    <h1>Request Information</h1>
+    <p>Name: ${param.name}</p>
+    <p>ID: ${param.id}</p>
+    <p>Age: ${param.age}</p>
+    <p>Address: ${param.address}</p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+/*
+ *  Create a Java servlet that reads the name of the user from a form and displays a
+	welcome message on the web page. The servlet should use the GET method to read
+	the input data from the user.
+ * 
+ */
+
+
+package in.ineuron.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import in.ineuron.service.WelocomeService;
+
+@WebServlet(urlPatterns = "/get/info")
+public class MyController extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+	
+	
+	private WelocomeService service = new WelocomeService();
+	private PrintWriter out = null;
+	
+	public void doGet(HttpServletRequest request , HttpServletResponse response) {
+		
+		try {
+			out = response.getWriter();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		String name = request.getParameter("name");
+		
+		String meessage = service.getWelcomeMeessage(name);
+		
+		out.println("<h1>"+meessage+"</h1>");	
+		
+	}
+
+}

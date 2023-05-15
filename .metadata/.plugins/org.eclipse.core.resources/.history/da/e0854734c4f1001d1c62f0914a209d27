@@ -1,0 +1,17 @@
+package in.ineuron.service;
+
+public class ExceptionServiceHandler{
+
+	public String checkNegativeNumberOrNot(int number) {
+		
+		if (number < 0) {	
+			number = Math.abs(number);
+		}
+
+       int[] arr = new int[number];
+		
+	   return "Size of the Array is ::"+arr.length;
+		
+	}
+
+}

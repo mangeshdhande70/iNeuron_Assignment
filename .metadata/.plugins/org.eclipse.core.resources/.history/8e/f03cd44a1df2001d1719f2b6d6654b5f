@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+</head>
+<body bgcolor="lightblue">
+		<form method="get" action="./get/info">
+			<table align='center'>
+				<tr>
+					<td>Enter Student Id :: </td>
+					<td><input type="text" name='id' /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value='Get Info' /></td>
+				</tr>
+			</table>
+		</form>
+</body>
+</html>

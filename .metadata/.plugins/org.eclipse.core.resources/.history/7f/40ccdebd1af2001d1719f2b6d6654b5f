@@ -1,0 +1,9 @@
+package com.ineuron.persis;
+
+import com.ineuron.dto.StudentDTO;
+
+public interface IStudentDao  {
+	
+	public StudentDTO getInfo(Integer id);
+	
+}

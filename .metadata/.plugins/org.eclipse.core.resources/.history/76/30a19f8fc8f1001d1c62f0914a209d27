@@ -1,0 +1,14 @@
+package in.ineuron.usingabstract;
+
+abstract public class BankService {
+	
+	private float balance = 9800f;
+
+	public String checkBalance() {
+		return "Your Balance is :: "+balance ;
+	}
+	
+	public abstract String withdraw(float amount ,  float balance);
+	public abstract String deposite(float amount ,  float balance);
+
+}

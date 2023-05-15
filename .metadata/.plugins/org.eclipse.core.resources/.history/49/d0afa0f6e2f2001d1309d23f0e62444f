@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login and Register</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+          integrity="sha512-GveJjKAGh9ZpHzV0zshhJ90C7rj3yyT6TQc+/dqzRmLsMTsTz9jqFmVtdss/1Fp96Vh/ARMMuuj7VwNvEgjNtg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Login and Register</h1>
+
+    <div class="row">
+
+        <!-- Login Link -->
+        <div class="col">
+            <a href="/login" class="btn btn-primary">Login</a>
+        </div>
+
+        <!-- Register Link -->
+        <div class="col">
+            <a href="/form" class="btn btn-secondary">Register</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"
+        integrity="sha512-6zzyU3q4F6zXsy6m+aQeCv0MNq/JrOJlT26T7+a16kRucBc7jB9X9twfwb0pUhvNEfJ7VfCokg+yw7/KOjHt8Q=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

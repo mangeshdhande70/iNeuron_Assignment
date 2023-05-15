@@ -1,0 +1,9 @@
+package in.ineuron.cal;
+
+public interface ICalculator {
+	
+	public Double calculateAreaOfCircle(float radius);
+	
+	public Double calculatePerimeterOfCircle(float radius);
+
+}

@@ -1,0 +1,7 @@
+package in.ineuron.model;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IProductDao extends JpaRepository<T, ID> {
+
+}

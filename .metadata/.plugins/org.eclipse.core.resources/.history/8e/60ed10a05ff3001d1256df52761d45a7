@@ -1,0 +1,27 @@
+package in.ineuron.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ineuron.dao.IProductDao;
+import in.ineuron.model.Product;
+import in.ineuron.utils.PostResponse;
+
+@Service
+public class ProductServiceImpl implements IProductService {
+	
+	@Autowired
+	private IProductDao repo;
+
+
+	@Override
+	public PostResponse getAllProducts(int pageNo, int pageSize, String sortBy, String sortDir) {
+		// TODO Auto-generated method stub
+		return repo.findAll();
+	}
+
+	
+	
+}

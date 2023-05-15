@@ -1,0 +1,20 @@
+package in.ineuron.service;
+
+public class ExceptionService{
+	
+	
+
+	private static final long serialVersionUID = 1L;
+
+	public String checkNegativeNumberOrNot(int number) {
+		
+		if (number < 0) {
+			throw new Exception().getMessage();
+		}
+		
+		
+		return "";
+		
+	}
+
+}

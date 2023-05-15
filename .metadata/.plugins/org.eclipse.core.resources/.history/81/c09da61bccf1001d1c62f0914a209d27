@@ -1,0 +1,25 @@
+
+/*
+ * Demonstrate the difference between abstract class and interface by writing programs
+   as well as in key points.
+ */
+
+package in.ineuron;
+
+import in.ineuron.usinginterface.IBankService;
+import in.ineuron.usinginterface.IciciBankServiceUsingInterfaceImpl;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		IBankService service = new IciciBankServiceUsingInterfaceImpl();
+		
+		service.checkBalance();
+		
+		
+		
+		
+	}
+
+}

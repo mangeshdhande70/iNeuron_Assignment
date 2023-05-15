@@ -1,0 +1,26 @@
+
+/*
+ *  Write a Java program that creates two threads. The first thread should print even
+	numbers between 1 and 10, and the second thread should print odd numbers
+	between 1 and 10.
+ */
+
+
+package in.ineuron;
+
+import java.util.Scanner;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		
+		
+		
+		
+		
+	}
+
+}

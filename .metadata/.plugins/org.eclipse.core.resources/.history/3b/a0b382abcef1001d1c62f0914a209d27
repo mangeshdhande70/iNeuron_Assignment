@@ -1,0 +1,37 @@
+
+/*
+ *  Write a Java program that uses stream api to perform operations on a large data set,
+    such as sorting or filtering the data
+ * 
+ */
+
+
+package in.ineuron;
+
+import java.util.Arrays;
+import java.util.List;
+
+import in.ineuron.service.StreamAPI;
+
+public class Runner {
+	
+	public static void main(String[] args) {
+		
+		StreamAPI service = new StreamAPI();
+		
+		List<Integer> list = Arrays.asList(9,2,14,20,35,32,15,19,18,5,4);
+		
+		System.out.println("Before Sorting :: \n"+list);
+		
+		List<Integer> sortedList = service.sortedList(list);
+		System.out.println("After Sorting :: \n"+sortedList);
+		
+		
+		System.out.println("\n\n Even Numbers in a List");
+		System.out.println(service.filterListByEvenNumber(list));
+		
+		
+		
+	}
+
+}

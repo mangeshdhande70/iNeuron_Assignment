@@ -1,0 +1,14 @@
+package in.ineuron.cal;
+
+public interface IAreaAndPerimenteCalculatorOfShapes {
+	
+	public Double calculateAreaOfCircle(float radius);
+	
+	public Double calculatePerimeterOfCircle(float radius);
+	
+	public Double calculatePerimeterOfTriangle(float s1,float s2 , float s3);
+	
+	public Double calculateAreaOfTriangle(float base , float height);
+	
+
+}

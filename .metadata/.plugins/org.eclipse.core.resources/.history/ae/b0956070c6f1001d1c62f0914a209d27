@@ -1,0 +1,26 @@
+package in.ineuron.service;
+
+public class BankServiceImpl implements IBankService {
+	
+	
+	private float balance = 9800f;
+
+	@Override
+	public float checkBalance() {
+		
+		return 0;
+	}
+
+	@Override
+	public String withdraw(float amount) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deposite(float amount) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

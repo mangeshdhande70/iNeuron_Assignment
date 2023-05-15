@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Request Information</title>
+</head>
+<body>
+    <div>
+        <h2>Student Information:</h2>
+        <p>Student Id : <span th:text="${request.id}"></span></p>
+        <p>Student Name : <span th:text="${request.name}"></span></p>
+        <p>Student Address: <span th:text="${request.address}"></span></p>
+        <p>Student Age : <span th:text="${request.age}"></span></p>
+        
+    </div>
+</body>
+</html>

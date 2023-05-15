@@ -1,0 +1,15 @@
+package in.ineuron.usinginterface;
+
+public interface IBankService {
+	
+	private float balance = 9800f;
+
+	
+	default String checkBalance() {
+		return "Your Balance is :: "+balance ;
+	}
+	
+	public abstract String withdraw(float amount ,  float balance);
+	public abstract String deposite(float amount ,  float balance);
+	
+}

@@ -1,0 +1,43 @@
+package in.ineuron.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class BinarySearch {
+	
+  public String findNumberPresentOrNot(int target) {
+	  
+	  List<Integer> list = Arrays.asList(1,2,3,4,5,6,7);
+	  
+	  int position = binarySearch(list, target, 0, list.size());
+	  
+	  if (position!=-1) {
+		return "Target Number found at postion :: "+position;
+	   }
+	  
+	  return "Target Element not present in a List";
+  }
+  
+  
+  public int binarySearch(List<Integer> list , int target,int first , int end) {
+	  
+	  int mid = first+end/2;
+	  
+	  if (mid==target) {
+		return mid;
+	  }
+	  
+	  if (target<mid) {
+		  return binarySearch(list, target, first, mid-1);
+		}
+	  
+	  if (target>mid) {
+		return binarySearch(list, target, mid+1, end);
+	  }
+	  
+	  return -1;
+  }
+  
+  
+
+}

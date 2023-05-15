@@ -1,0 +1,73 @@
+package com.mangesh.controller;
+
+import java.util.Scanner;
+
+import com.mangesh.model.Employee;
+import com.mangesh.persist.EmployeeDao;
+import com.mangesh.util.EmployeeDaoUtil;
+
+public class Runner {
+
+	public static void main(String[] args) {
+
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		EmployeeDao employeeDao = null;
+
+		while (true) {
+
+			System.out.println(" Select your choice ");
+			System.out.println("\n1. To Insert");
+			System.out.println("2. To Retrive");
+			System.out.println("3. exit()");
+
+			int choice = scanner.nextInt();
+
+			switch (choice) {
+			case 1:
+				Employee employee = new Employee();
+				System.out.println("Enter Employee Name");
+				employee.setEmpolyeeName(scanner.next());
+				System.out.println("Enter Employee Salary");
+				employee.setSalary(scanner.nextFloat());
+				System.out.println("Enter Employee Experience");
+				employee.setExperience(scanner.nextInt());
+				
+				employeeDao = EmployeeDaoUtil.getEmployeeDao();
+				String status = employeeDao.saveEmployee(employee);
+				if (status!=null) {
+					System.out.println(status);
+				}else {
+					System.out.println("sorry for inconvinieance, we are not able to save employee details...Try again Later");
+				}
+				
+				break;
+
+			case 2:
+				System.out.println("Enter the Employee Id");
+				int id = scanner.nextInt();
+				employeeDao = EmployeeDaoUtil.getEmployeeDao();
+
+				Employee employee2 = employeeDao.getEmployee(id);
+
+				if (employee2 != null)
+					System.out.println(employee2);
+				else {
+					System.out.println("Record not found for id :: " + id);
+				}
+				break;
+
+			case 3:
+				System.out.println("Exit From the Application");
+				System.exit(0);
+
+			default:
+				System.out.println("You Enetered Wrong Choice.... Please Try Again");
+				break;
+
+			}
+
+		}
+
+	}
+}

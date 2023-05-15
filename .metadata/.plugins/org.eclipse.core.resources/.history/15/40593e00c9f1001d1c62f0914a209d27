@@ -1,0 +1,20 @@
+package in.ineuron.usinginterface;
+
+public class IciciBankServiceImpl implements IBankService {
+	
+	
+	
+	@Override
+	public String withdraw(float amount , float balance) {
+		balance-=amount;
+		return "Your remaining balance is :: "+balance;
+	}
+
+	@Override
+	public String deposite(float amount , float balance) {
+
+		balance+=amount;
+		return "Your Total balance is :: "+balance;
+	}
+
+}

@@ -9,3 +9,7 @@
 1684128919250	Delete resource 'QP-23'
 1684158305454	Delete resource 'QP-27-Eureka-Client-Service'
 1684159123936	Delete resource 'QP-27-Eureka-Service'
+1684220033046	Rename resource 'QP-28'
+1684224420767	Delete resource 'QP-30'
+1684227526243	Delete resource 'QP-30-Circuit-Breaker'
+1684229000627	Delete resource 'QP-30-Circuit-Breaker'
